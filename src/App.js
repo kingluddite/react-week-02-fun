@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { nflTeams } from "./data/nfl";
+import Header from "./components/Header";
+
+const person = {
+  firstName: "Phil",
+  lastName: "Howley",
+};
 
 function App() {
+  // console.log(nflTeams);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header person={person} nflTeamsArr={nflTeams} />
+      <div>hello from App </div>
     </div>
   );
 }
